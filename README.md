@@ -1,2 +1,2 @@
 # utility-header
-Header with some helpfull functions
+Header with some helpful functions
