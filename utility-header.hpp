@@ -27,7 +27,7 @@ namespace utils {
     std::string int_to_string(const int &integer);
     
     //converts a string to int
-    int string_to_int(std::string s);
+    int string_to_int(const std::string& s);
 
     ////////////////////
     // Implementation //
@@ -81,7 +81,7 @@ namespace utils {
         return the_string;
     }
 
-    int string_to_int(std::string s) {
+    int string_to_int(const std::string& s) {
         int integer = atoi(&s[0]);
         return integer;
         
