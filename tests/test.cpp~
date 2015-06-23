@@ -66,6 +66,6 @@ TEST_CASE("Input", "[INPUT]" ) {
     std::string input = utils::keyboard_input();
     std::cout<<input<<std::endl;
     REQUIRE(input == "hej");
-}*/
+}
 
 
