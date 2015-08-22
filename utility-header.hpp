@@ -6,6 +6,8 @@
 #include <algorithm>
 #include <stdio.h>
 #include <iostream>
+#include <fstream>
+#include <stdexcept>
 namespace utils {
 
     // Splits a string on spaces and returns a vector:
@@ -29,9 +31,29 @@ namespace utils {
     //converts a string to int
     int string_to_int(const std::string& s);
 
+    
+    std::string read_file(const std::string & filename);
+    
     ////////////////////
     // Implementation //
     ////////////////////
+
+    std::string read_file(const std::string & filename) {
+
+        std::string text; //returning the file as a string        
+        std::ifstream file(filename);
+        std::string line;
+        
+        if(!file.is_open()) { // could not open the file
+           throw "File couldnt be open due to some reasons!";
+        }        
+
+        while(std::getline(file, line)) {   
+            text +=line;
+            text +='\n';
+        }
+        return text;
+    }
 
     std::vector<std::string> split_on_spaces(const std::string& s) {
         return tokenize(s, std::string(" "));

@@ -5,6 +5,11 @@
 #include <string>
 #include <vector>
 
+/*
+TEST_CASE("Reading files", "[ReadFiles]") {
+    utils::read_file("test_textfile1");
+}
+
 TEST_CASE( "Splitting strings with spaces", "[strings/tokenize]" ) {
     std::string test_string1 = "Hello World!";
     std::string test_string2 = "";
@@ -66,6 +71,6 @@ TEST_CASE("Input", "[INPUT]" ) {
     std::string input = utils::keyboard_input();
     std::cout<<input<<std::endl;
     REQUIRE(input == "hej");
-}
+}*/
 
 
